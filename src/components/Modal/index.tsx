@@ -75,18 +75,18 @@ const Modal: React.FC<ModalProps> = ({
           <div className='modal'>
             <form onSubmit={handleSubmit}>
               <div className='modal-content'>
-                {!editMode ? (
-                  <div className='modal-content-title'>
-                    <span>Add new idea item</span>
-                    <span
-                      aria-hidden='true'
-                      className='modal-content-title-cancel'
-                      onClick={() => toggleModal()}
-                    >
-                      x
-                    </span>
-                  </div>
-                ) : (
+                {/* {!editMode ? ( */}
+                <div className='modal-content-title'>
+                  <span>Add new idea item</span>
+                  <span
+                    aria-hidden='true'
+                    className='modal-content-title-cancel'
+                    onClick={() => toggleModal()}
+                  >
+                    x
+                  </span>
+                </div>
+                {/* ) : (
                   <div className='modal-content-title'>
                     <div>
                       <span>Adit idea item</span>
@@ -106,7 +106,7 @@ const Modal: React.FC<ModalProps> = ({
                       x
                     </span>
                   </div>
-                )}
+                )} */}
                 <input
                   type='text'
                   name='title'
@@ -152,7 +152,7 @@ const Modal: React.FC<ModalProps> = ({
                 </div>
 
                 <div>
-                  {!editMode ? null : <button>Remove</button>}
+                  {/* {!editMode ? null : <button>Remove</button>} */}
 
                   <button type='submit' className='btn'>
                     Save
@@ -163,24 +163,6 @@ const Modal: React.FC<ModalProps> = ({
           </div>
         </div>
       )}
-      {/* <div className='note-container'>
-        {notes.map((noteItem: { id: any; note: any; complete: any }) => {
-          const { id, note, complete } = noteItem;
-          return (
-            <div key={id} className='note-card'>
-              <div className='icon' onClick={() => toggleComplete(id)}>
-                {!complete ? (
-                  <FiCircle />
-                ) : (
-                  <IoIosCheckmarkCircle className={complete ? 'icon-done' : ''} />
-                )}
-              </div>
-              <p className={complete ? 'text-done' : ''}>{note}</p>
-              <MdDeleteForever onClick={() => deleteNote(id)} className='icon delete-icon' />
-            </div>
-          );
-        })}
-      </div> */}
     </div>
   );
 };
