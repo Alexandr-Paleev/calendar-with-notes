@@ -1,2 +1,2 @@
-# calendar-with-notes
+# Calendar-with-notes
 React, TS
